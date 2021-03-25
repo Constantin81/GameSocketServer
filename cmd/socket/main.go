@@ -25,8 +25,8 @@ func main() {
 
 		if err != nil {
 			log.Printf("starter to accepr connection: %v", err.Error())
-			go s.NewClient(conn)
 			continue
 		}
+		go s.NewClient(conn)
 	}
 }
